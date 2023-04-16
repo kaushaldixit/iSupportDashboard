@@ -1,0 +1,176 @@
+﻿@model Dashboard_iSupport.Models.iSupportData
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+
+
+<div>
+    <div>
+        <h3 class="text-md-center">Ticket No-<i style="background-color:#FFFACD">@Model.Number</i></h3>
+    </div>
+    </div>
+<hr />
+<div>
+<div class="container row">
+    <div class="col">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Number" />
+           @* <div class="form-group">
+                <label asp-for="Status_Label" class="control-label"></label>
+                <input asp-for="Status_Label" class="form-control" />
+                <span asp-validation-for="Status_Label" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Priority" class="control-label"></label>
+                <input asp-for="Priority" class="form-control" />
+                <span asp-validation-for="Priority" class="text-danger"></span>
+            </div>*@
+            <div class="form-group row">
+                <div class="col">
+                    <label for="Status_Label" class="col-sm-4 col-form-label"><strong>Status_Label</strong></label>
+                    <div class="col-sm-10">
+                        <input asp-for="Status_Label" class="form-control" id="" placeholder="Status_Label" />
+                    </div>
+                </div>
+                <div class="col">
+                    <label for="Priority" class="col-sm-4 col-form-label"><strong>Priority</strong></label>
+                    <div class="col-sm-10">
+                        <input asp-for="Priority" class="form-control" id="" placeholder="Priority">
+                    </div>
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col">
+                    <label for="Create_Date" class="col-sm-4 col-form-label"><strong>Create Date</strong></label>
+                    <div class="col-sm-10">
+                        <input asp-for="Date_Created" class="form-control" id="Create_Date" placeholder="Create Date" />
+                    </div>
+                </div>
+                <div class="col">
+                    <label for="Close_Date" class="col-sm-4 col-form-label"><strong>Close Date</strong></label>
+                    <div class="col-sm-10">
+                        <input asp-for="Date_Closed" class="form-control" id="Close_Date" placeholder="Close Date">
+                    </div>
+                </div>
+            </div>
+           @* <div class="form-group">
+                <label asp-for="Assignee" class="control-label"></label>
+                <input asp-for="Assignee" class="form-control" />
+                <span asp-validation-for="Assignee" class="text-danger"></span>
+            </div>*@
+            <div class="form-group row">
+                <div class="col">
+                    <label for="Assignee" class="col-sm-4 col-form-label"><strong>Assignee</strong></label>
+                    <div class="col-sm-10">
+                        <input asp-for="Assignee" class="form-control" id="" placeholder="Assignee" />
+                    </div>
+                </div>
+                <div class="col">
+                    <label for="Application_Name" class="col-sm-4 col-form-label"><strong>Application</strong></label>
+                    <div class="col-sm-10">
+                        <input asp-for="Application_Name" class="form-control" id="Close_Date" placeholder="Application_Name">
+                    </div>
+                </div>
+            </div>
+            @* <div class="form-group">
+                <label asp-for="Time_Open__Min_" class="control-label"></label>
+                <input asp-for="Time_Open__Min_" class="form-control" />
+                <span asp-validation-for="Time_Open__Min_" class="text-danger"></span>
+            </div>*@
+            @*<div class="form-group">
+                <label asp-for="TAT" class="control-label"></label>
+                <input asp-for="TAT" class="form-control" />
+                <span asp-validation-for="TAT" class="text-danger"></span>
+            </div>*@
+            @*<div class="form-group">
+                <label asp-for="Missing_Ticket" class="control-label"></label>
+                <input asp-for="Missing_Ticket" class="form-control" />
+                <span asp-validation-for="Missing_Ticket" class="text-danger"></span>
+            </div>*@
+           @* <div class="form-group">
+                <label asp-for="Application_Name" class="control-label"></label>
+                <input asp-for="Application_Name" class="form-control" />
+                <span asp-validation-for="Application_Name" class="text-danger"></span>
+            </div>*@
+            @*<div class="form-group">
+                <label asp-for="Sub_Categorization_of_Error" class="control-label"></label>
+                <input asp-for="Sub_Categorization_of_Error" class="form-control" />
+                <span asp-validation-for="Sub_Categorization_of_Error" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Count_of_Errors" class="control-label"></label>
+                <input asp-for="Count_of_Errors" class="form-control" />
+                <span asp-validation-for="Count_of_Errors" class="text-danger"></span>
+            </div>*@
+                <div class="form-group row">
+                    <div class="col">
+                        <label for="Sub_Categorization_of_Error" class="col-sm-4 col-form-label"><strong>Sub Category</strong></label>
+                        <div class="col-sm-10">
+                            <input asp-for="Sub_Categorization_of_Error" class="form-control" id="" placeholder="Sub_Categorization_of_Error" />
+                        </div>
+                    </div>
+                    <div class="col">
+                        <label for="Count_of_Errors" class="col-sm-4 col-form-label"><strong>Count</strong></label>
+                        <div class="col-sm-10">
+                            <input asp-for="Count_of_Errors" class="form-control" id="" placeholder="Count_of_Errors">
+                        </div>
+                    </div>
+                </div>
+           @* <div class="form-group">
+                <label asp-for="Reason_for_Escalation_to_the_SME" class="control-label"></label>
+                <input asp-for="Reason_for_Escalation_to_the_SME" class="form-control" />
+                <span asp-validation-for="Reason_for_Escalation_to_the_SME" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Actual_Person_Handling_the_ticket" class="control-label"></label>
+                <input asp-for="Actual_Person_Handling_the_ticket" class="form-control" />
+                <span asp-validation-for="Actual_Person_Handling_the_ticket" class="text-danger"></span>
+            </div>*@
+                <div class="form-group row">
+                    <div class="col">
+                        <label for="Reason_for_Escalation_to_the_SME" class="col-sm-4 col-form-label"><strong>Reason</strong></label>
+                        <div class="col-sm-10">
+                            <input asp-for="Reason_for_Escalation_to_the_SME" class="form-control" id="" placeholder="Reason_for_Escalation_to_the_SME" />
+                        </div>
+                    </div>
+                    <div class="col">
+                        <label for="Actual_Person_Handling_the_ticket" class="col-sm-4 col-form-label"><strong>Handling Persons</strong></label>
+                        <div class="col-sm-10">
+                            <input asp-for="Actual_Person_Handling_the_ticket" class="form-control" id="" placeholder="Actual_Person_Handling_the_ticket">
+                        </div>
+                    </div>
+                </div>
+            @*<div class="form-group">
+                <label asp-for="Error_Type" class="control-label"></label>
+                <input asp-for="Error_Type" class="form-control" />
+                <span asp-validation-for="Error_Type" class="text-danger"></span>
+            </div>*@
+                <div class="form-group row">
+                    <div class="col">
+                        <label for="Error_Type" class="col-sm-4 col-form-label"><strong>Error Type</strong></label>
+                        <div class="col-sm-10">
+                            <input asp-for="Error_Type" class="form-control" id="" placeholder="Error_Type" />
+                        </div>
+                    </div>
+                </div>
+            @*<div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>*@
+                <div class="form-group">
+                    <div class="col-md-12 text-center">
+                        <input type="submit" value="Save" class="btn btn-primary" />
+                        <a asp-action="Index" class="btn btn-primary">Back</a>
+                    </div>
+                </div>
+        </form>
+    </div>
+</div>
+</div>
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

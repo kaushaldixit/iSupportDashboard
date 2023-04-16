@@ -1,0 +1,118 @@
+﻿@model Dashboard_iSupport.Models.iSupportData
+
+@{
+    ViewData["Title"] = "Ticket detail";
+    
+
+}
+<div>
+<div>
+<h3 class="text-md-center">Ticket No-<i style="background-color:#FFFACD">@Model.Number</i></h3><hr />
+</div>
+<div>
+    
+    <dl class="row">
+        <dt class = "col-sm-2">
+                @*@Html.DisplayNameFor(model => model.Status_Label)*@Status Label
+        </dt>
+        <dd class = "col-sm-10 text-danger">
+                    @Html.DisplayFor(model => model.Status_Label)
+            </dd>
+           
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Priority)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Priority)
+        </dd>
+        <dt class = "col-sm-2">
+                @*@Html.DisplayNameFor(model => model.Date_Created)*@ Date Created
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Date_Created)
+        </dd>
+        <dt class = "col-sm-2">
+                @*@Html.DisplayNameFor(model => model.Date_Closed)*@ Date Closed
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Date_Closed)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Assignee)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Assignee)
+        </dd>
+         <dt class = "col-sm-2">
+                @*@Html.DisplayNameFor(model => model.Application_Name)*@ Application Name
+        </dt>
+        <dd class = "col-sm-10">
+                @Html.DisplayFor(model => model.Application_Name)
+        </dd>
+         <dt class = "col-sm-2">
+                @*@Html.DisplayNameFor(model => model.Sub_Categorization_of_Error)*@ Sub Categorization of Error
+        </dt>
+        <dd class = "col-sm-10">
+                @Html.DisplayFor(model => model.Sub_Categorization_of_Error)
+        </dd>
+        <dt class = "col-sm-2">
+                @*@Html.DisplayNameFor(model => model.Error_Type)*@ Error Type
+        </dt>
+        <dd class = "col-sm-10">
+                @Html.DisplayFor(model => model.Error_Type)
+        </dd>
+        <dt class = "col-sm-2">
+                @*@Html.DisplayNameFor(model => model.Time_Open__Min_)*@ Time Open
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Time_Open__Min_) Minutes
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.TAT)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.TAT)
+        </dd>
+        @*<dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Missing_Ticket)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Missing_Ticket)
+        </dd>*@
+       
+       
+        <dt class = "col-sm-2">
+                @*@Html.DisplayNameFor(model => model.Count_of_Errors)*@ Count of Errors
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Count_of_Errors)
+        </dd>
+        <dt class = "col-sm-2">
+                @*@Html.DisplayNameFor(model => model.Reason_for_Escalation_to_the_SME)*@ Reason for Escalation to the SME
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Reason_for_Escalation_to_the_SME)
+        </dd>
+        <dt class = "col-sm-2">
+                @*@Html.DisplayNameFor(model => model.Actual_Person_Handling_the_ticket)*@Actual Person Handling the ticket
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Actual_Person_Handling_the_ticket)
+        </dd>
+        
+    </dl>
+</div>
+@*<div class="align-self-start">
+    
+    <a class="btn btn-sm btn-primary" asp-action="Index">Back to List</a>
+    @*<a class="btn btn-sm btn-primary" asp-action="Edit" asp-route-id="@Model.Number"><i class="fa fa-pencil fa-fw"></i>Edit</a>*@
+@*</div>*@
+    <div class="form-group">
+        <div class="col-md-12 text-center">
+            <a asp-action="Edit" asp-route-Number="@Model.Number"  class="btn btn-primary">Edit</a>
+            <a asp-action="Index" class="btn btn-primary">Back</a>
+        </div>
+    </div>
+</div>
+
+
