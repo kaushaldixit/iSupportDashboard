@@ -1,0 +1,18 @@
+﻿@model Dashboard_iSupport.Models.ApplicationName;
+
+<h1>Dependant dropdown list</h1>
+
+<form asp-controller="Home" asp-action="Dropdown" method="post" class="form-horizontal" role="form">
+    <div class="form-group row">
+        <div class="col">        
+               
+                <label for="Application" class="col-sm-2 col-form-label"><strong>Application Name</strong></label>
+            <div class="col-sm-10">
+                    <select asp-for="Id" class="form-control" asp-items="@(new SelectList(ViewBag.listOfApplication,"Id","Application"))"></select>
+                </div>
+            </div>
+        </div>
+
+   
+
+</form>

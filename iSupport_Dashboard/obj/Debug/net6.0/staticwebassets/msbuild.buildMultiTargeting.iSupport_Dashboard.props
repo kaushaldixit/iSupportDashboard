@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\iSupport_Dashboard.props" />
+</Project>
